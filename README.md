@@ -1,5 +1,5 @@
 # Watchdog: Process Monitoring System
-##Project Description
+## Project Description
 Watchdog is a software component designed to monitor time-critical tasks by overseeing processes in C and facilitating IPC between them. It ensures the reliability of critical processes by employing a mutual protection mechanism, where each process is monitored by a dedicated watchdog process created via fork(). This watchdog is vigilant, receiving regular SIGUSR1 signals from the monitored process, thanks to a scheduler and various data structures like doubly linked lists, sorted lists, and priority queue which I implemented in C earlier.
 
 ## Key Features:
