@@ -1,0 +1,4 @@
+sending interval is:
+1
+checking interval is:
+5
