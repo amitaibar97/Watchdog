@@ -93,55 +93,6 @@ ilrd_uid_t SchedAdd(sched_t *sched,
 
 int SchedRun(sched_t *sched)
 {
-	/* int task_status = -10;
-	task_t *cur_task = NULL;
-	
-	assert(NULL != sched);
-	
-	while(!PQIsEmpty(sched->pq) && 0 == sched->to_stop)
-	{
-		cur_task = PQDequeue(sched->pq);
-		sched->current_task = cur_task;
-		
-		while(time(NULL) < TaskGetTimeToRun(cur_task))
-		{
-			sleep(1);
-		}
-		
-		task_status = TaskRun(cur_task);
-		
-		switch(task_status)
-		{
-			case OP_ERROR:
-			case OP_DONE:
-								
-					TaskDestroy(cur_task);
-					sched->to_remove_current = 0;
-					break;	
-
-			case OP_CONTINUE:					
-					TaskUpdateTimeToRun(cur_task);
-					if(1 == PQEnqueue(sched->pq, cur_task))
-					{
-						TaskDestroy(cur_task);
-						sched->current_task = NULL;
-						return(MEMORY_ERR);
-					}
-					break;
-
-		}
-
-		sched->current_task = NULL;
-		
-		if(1 == sched->to_stop)
-		{
-			sched->to_stop = 0;
-			return STOPPED;
-		}
-	}
-	
-	return NO_MORE_TASKS;
-} */
 	time_t diff = 0;
 	int answer = 0; 
 	time_t time_to_run = 0;
