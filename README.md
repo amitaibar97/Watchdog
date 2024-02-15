@@ -12,7 +12,10 @@ Watchdog is a software component designed to monitor time-critical tasks by over
 * Signal Exchange: The monitored process sends SIGUSR1 signals at a constant rate to the watchdog, indicating its active status.
 * Vitality Checks: The watchdog periodically checks for these signals. A lack of signals triggers the watchdog to revive the monitored process.
 * Termination: Monitoring can be gracefully stopped using the wdStop API by sending SIGUSR2 to the watchdog proccess, ensuring controlled termination of the watchdog's vigilance.
-* the pace of sending and measuring the signals by the proccesses can be controlled by an attached config-file which the user can edit according to its needs. 
+* the pace of sending and measuring the signals by the proccesses can be controlled by an attached config-file which the user can edit according to its needs.
+
+the full flow is attached to the repo for better visual understanding.
+
 ## Installation and Usage
 clone the repo into the computer and use the makefile in oreder to make a dynamic libraries with all the dependencies. there is an option to make a debug of release versions. the debug contains some printing to get some live feedback of the singls, the sender pid and dest pid.
 
