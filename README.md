@@ -19,5 +19,7 @@ the full flow is attached to the repo for better visual understanding.
 ## Installation and Usage
 clone the repo into the computer and use the makefile in oreder to make a dynamic libraries with all the dependencies. there is an option to make a debug of release versions. the debug contains some printing to get some live feedback of the singls, the sender pid and dest pid.
 
+inside the watchdog directory there is a client and watchdog usage with the API.
+
 
 
